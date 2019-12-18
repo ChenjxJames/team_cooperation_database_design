@@ -94,9 +94,9 @@
 
   * 0 site_admin
   * 1 organization_creater
-  * 2 kanban_creater
-  * 3 kanban_admin
-  * 4 kanban_member
+  * 2 board_creater
+  * 3 board_admin
+  * 4 board_member
 
   ```sql
   CREATE TABLE `role` (
@@ -135,20 +135,20 @@
   );
   ```
 
-* kanban 
+* board 
   | name | class | length | not null | default |
   | :-: | :-: | :-: | :-: | :-: |
-  | kanban_id | int | | yes | AUTO_INCREMENT |
+  | board_id | int | | yes | AUTO_INCREMENT |
   | team_id | int | yes | |
-  | kanban_name | varchar | 31 | yes | |
+  | board_name | varchar | 31 | yes | |
   | create_user | int | | yes | |
   | create_time | datetime | | yes | CURRENT_TIMESTAMP |
 
   ```sql
-  CREATE TABLE `kanban` (
-    `kanban_id` INT PRIMARY KEY AUTO_INCREMENT,
+  CREATE TABLE `board` (
+    `board_id` INT PRIMARY KEY AUTO_INCREMENT,
     `team_id` INT NOT NULL,
-    `kanban_name` VARCHAR(31) NOT NULL,
+    `board_name` VARCHAR(31) NOT NULL,
     `create_user` INT NOT NULL,
     `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (`team_id`) REFERENCES team(`team_id`)
