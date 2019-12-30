@@ -5,10 +5,10 @@
   * session
   ```json
   {
-    "_id":"a069d46e-cb24-4d6b-95c4-848137a8b02e",
+    "_id":"id",
     "__v":0,
     "data":{
-      "username":"username",
+      "username":"username ",
       "permissions":{
         "organization":{
           "id":"organization_id",
@@ -31,5 +31,15 @@
       "_maxAge":86400000
     },
     "updatedAt":"2019-12-26T17:46:02.315Z"
+  }
+  ```
+  * verification_code
+  ```json
+  {
+    "_id":"id",
+    "__v":0,
+    "user_id":"user_id",
+    "verification_code": "verification_code",     
+    "updatedAt":"time"
   }
   ```
