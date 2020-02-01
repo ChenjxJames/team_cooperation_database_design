@@ -38,7 +38,7 @@ CREATE TABLE `organization` (
 
 CREATE TABLE `organization_user` (
   `organization_id` INT NOT NULL,
-  `user_id` INT NOT NULL,
+  `user_id` INT NOT NULL UNIQUE,
   `role_id` INT NOT NULL,
   PRIMARY KEY (`organization_id`, `user_id`),
   FOREIGN KEY (`organization_id`) REFERENCES organization(`organization_id`),
