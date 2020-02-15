@@ -8,7 +8,9 @@
     "_id":"id",
     "__v":0,
     "data":{
+      "user_id": "user_id",
       "username":"username ",
+      "email": "email",
       "permissions":{
         "organization":{
           "id":"organization_id",
