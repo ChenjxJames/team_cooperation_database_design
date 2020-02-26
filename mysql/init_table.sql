@@ -70,9 +70,7 @@ CREATE TABLE `team_user` (
 CREATE TABLE `board` (
   `board_id` INT PRIMARY KEY AUTO_INCREMENT,
   `board_name` VARCHAR(32) NOT NULL,
-  `team_id` INT,
-  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (`team_id`) REFERENCES team(`team_id`)
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `board_user` (
