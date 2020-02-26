@@ -85,6 +85,14 @@ CREATE TABLE `board_user` (
   FOREIGN KEY (`role_id`) REFERENCES role(`role_id`)
 );
 
+CREATE TABLE `team_board` (
+  `team_id` INT NOT NULL,
+  `board_id` INT NOT NULL,
+  PRIMARY KEY (`team_id`, `board_id`),
+  FOREIGN KEY (`team_id`) REFERENCES team(`team_id`),
+  FOREIGN KEY (`board_id`) REFERENCES board(`board_id`)
+);
+
 CREATE TABLE `list` (
   `list_id` INT PRIMARY KEY AUTO_INCREMENT,
   `list_name` VARCHAR(32) NOT NULL,
