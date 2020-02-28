@@ -7,9 +7,7 @@ VALUES ("0", "site_admin"),
 ("3", "organization_member"),
 ("4", "team_super_admin"),
 ("5", "team_admin"),
-("6", "team_member"),
-("7", "board_admin"),
-("8", "board_member");
+("6", "team_member");
 
 INSERT INTO `permission`(`permission_id`, `permission_name`)
 VALUES("0", "manage_site"),
@@ -23,12 +21,7 @@ VALUES("0", "manage_site"),
 ("21", "remove_team"),
 ("22", "set_team_info"),
 ("23", "manage_team_member"),
-("24", "join_team"),
-("25", "exit_team"),
-("31", "remove_board"),
-("32", "set_board_info"),
-("33", "manage_board_member"),
-("34", "exit_board");
+("24", "exit_team");
 
 INSERT INTO `role_permission`(`role_id`, `permission_id`)
 VALUES("0", "0"),
@@ -46,9 +39,5 @@ VALUES("0", "0"),
 ("4", "23"),
 ("5", "22"),
 ("5", "23"),
-("5", "25"),
-("6", "25"),
-("7", "31"),
-("7", "32"),
-("7", "33"),
-("8", "34");
+("5", "24"),
+("6", "24");
