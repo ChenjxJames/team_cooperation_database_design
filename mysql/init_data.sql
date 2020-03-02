@@ -21,7 +21,8 @@ VALUES("0", "manage_site"),
 ("21", "remove_team"),
 ("22", "set_team_info"),
 ("23", "manage_team_member"),
-("24", "exit_team");
+("24", "exit_team"),
+("31", "remove_board");
 
 INSERT INTO `role_permission`(`role_id`, `permission_id`)
 VALUES("0", "0"),
@@ -37,7 +38,9 @@ VALUES("0", "0"),
 ("4", "21"),
 ("4", "22"),
 ("4", "23"),
+("4", "31"),
 ("5", "22"),
 ("5", "23"),
 ("5", "24"),
+("5", "31"),
 ("6", "24");
