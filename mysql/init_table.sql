@@ -211,10 +211,19 @@ CREATE TABLE `file` (
   `file_type` VARCHAR(16) NOT NULL,
   `md5` BINARY(16) NOT NULL,
   `path` VARCHAR(255) NOT NULL,
-  `create_user` INT NOT NULL,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (`create_user`) REFERENCES user(`user_id`)
 );
+
+CREATE TABLE `file_user` (
+  `file_id` INT NOT NULL,
+  `user_id` INT NOT NULL,
+  `folder_id` INT NOT NULL,
+  PRIMARY KEY (`file_id`, `user_id`),
+  FOREIGN KEY (`file_id`) REFERENCES file(`file_id`),
+  FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
+  FOREIGN KEY (`folder_id`) REFERENCES file(`file_id`)
+)
 
 CREATE TABLE `file_share` (
   `file_id` INT NOT NULL,
