@@ -146,7 +146,7 @@ CREATE TABLE `tag` (
   `tag_id` BIGINT PRIMARY KEY AUTO_INCREMENT,
   `tag_name` VARCHAR(64) NOT NULL,
   `board_id` INT NOT NULL,
-  `listor` BINARY(3) NOT NULL,
+  `color` BINARY(3) NOT NULL,
   FOREIGN KEY (`board_id`) REFERENCES board(`board_id`)
 );
 -- UNHEX()可以将"af09cb"装换成BINARY,HEX()反之
