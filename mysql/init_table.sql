@@ -49,7 +49,7 @@ CREATE TABLE `organization_user` (
 CREATE TABLE `team` (
   `team_id` INT PRIMARY KEY AUTO_INCREMENT,
   `team_name` VARCHAR(32) NOT NULL,
-  `organization_id` INT NOT NULL,
+  `organization_id` INT,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (`organization_id`) REFERENCES organization(`organization_id`)
 );
@@ -71,16 +71,6 @@ CREATE TABLE `board` (
   `board_id` INT PRIMARY KEY AUTO_INCREMENT,
   `board_name` VARCHAR(32) NOT NULL,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
-
-CREATE TABLE `board_user` (
-  `board_id` INT NOT NULL,
-  `user_id` INT NOT NULL,
-  `role_id` INT NOT NULL,
-  PRIMARY KEY (`board_id`, `user_id`),
-  FOREIGN KEY (`board_id`) REFERENCES board(`board_id`),
-  FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
-  FOREIGN KEY (`role_id`) REFERENCES role(`role_id`)
 );
 
 CREATE TABLE `team_board` (
