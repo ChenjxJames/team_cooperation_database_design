@@ -136,8 +136,10 @@ CREATE TABLE `task_comment` (
   `comment_id` BIGINT PRIMARY KEY AUTO_INCREMENT,
   `comment_content` VARCHAR(255) NOT NULL,
   `task_id` BIGINT NOT NULL,
+  `user_id` INT NOT NULL,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (`task_id`) REFERENCES task(`task_id`)
+  FOREIGN KEY (`task_id`) REFERENCES task(`task_id`),
+  FOREIGN KEY (`user_id`) REFERENCES user(`user_id`)
 );
 
 CREATE TABLE `tag` (
