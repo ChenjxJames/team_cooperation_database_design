@@ -207,7 +207,7 @@ CREATE TABLE `work_time` (
 
 CREATE TABLE `file` (
   `file_id` INT PRIMARY KEY AUTO_INCREMENT,
-  `filename` VARCHAR(255) NOT NULL,
+  `file_name` VARCHAR(255) NOT NULL,
   `file_type` VARCHAR(16) NOT NULL,
   `md5` BINARY(16) NOT NULL,
   `path` VARCHAR(255) NOT NULL,
