@@ -212,7 +212,6 @@ CREATE TABLE `file` (
   `md5` BINARY(16) NOT NULL,
   `path` VARCHAR(255) NOT NULL,
   `size` BIGINT NOT NULL,
-  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (`create_user`) REFERENCES user(`user_id`)
 );
 
@@ -220,6 +219,7 @@ CREATE TABLE `file_user` (
   `file_id` INT NOT NULL,
   `user_id` INT NOT NULL,
   `folder_id` INT NOT NULL,
+  `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`file_id`, `user_id`),
   FOREIGN KEY (`file_id`) REFERENCES file(`file_id`),
   FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
