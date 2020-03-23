@@ -44,4 +44,4 @@ VALUES("0", "0"),
 ("6", "24");
 
 
--- INSERT INTO `role_permission`(`role_id`, `permission_id`) VALUES("2", "15"),("3", "15");
+INSERT INTO `file` (`file_id`, `file_name`, `file_type`, `md5`, `path`, `size`) VALUES ('0', 'root', 'none', 0x0, '', '0');

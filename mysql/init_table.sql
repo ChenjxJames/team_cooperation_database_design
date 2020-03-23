@@ -220,7 +220,7 @@ CREATE TABLE `file_user` (
   `user_id` INT NOT NULL,
   `folder_id` INT,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`file_id`, `user_id`, `folder_id`),
+  PRIMARY KEY (`file_id`, `user_id`),
   FOREIGN KEY (`file_id`) REFERENCES file(`file_id`),
   FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
   FOREIGN KEY (`folder_id`) REFERENCES file(`file_id`)
