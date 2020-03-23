@@ -218,7 +218,7 @@ CREATE TABLE `file` (
 CREATE TABLE `file_user` (
   `file_id` INT NOT NULL,
   `user_id` INT NOT NULL,
-  `folder_id` INT NOT NULL,
+  `folder_id` INT,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`file_id`, `user_id`),
   FOREIGN KEY (`file_id`) REFERENCES file(`file_id`),
