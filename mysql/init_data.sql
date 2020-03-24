@@ -43,5 +43,5 @@ VALUES("0", "0"),
 ("5", "31"),
 ("6", "24");
 
-
+SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
 INSERT INTO `file` (`file_id`, `file_type`, `md5`, `path`, `size`) VALUES ('0', 'none', 0x0, '', '0');
