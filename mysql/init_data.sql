@@ -44,4 +44,4 @@ VALUES("0", "0"),
 ("6", "24");
 
 
-INSERT INTO `file` (`file_id`, `file_name`, `file_type`, `md5`, `path`, `size`) VALUES ('0', 'root', 'none', 0x0, '', '0');
+INSERT INTO `file` (`file_id`, `file_type`, `md5`, `path`, `size`) VALUES ('0', 'none', 0x0, '', '0');
