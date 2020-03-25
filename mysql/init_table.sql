@@ -227,6 +227,7 @@ CREATE TABLE `file_user` (
 
 CREATE TABLE `file_share` (
   `file_id` INT NOT NULL,
+  `file_name` VARCHAR(255) NOT NULL,
   `share_user` INT NOT NULL,
   `create_user` INT NOT NULL,
   `create_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -241,6 +242,7 @@ CREATE TABLE `file_share` (
 CREATE TABLE `task_file` (
   `task_id` BIGINT NOT NULL,
   `file_id` INT NOT NULL,
+  `file_name` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`task_id`, `file_id`),
   FOREIGN KEY (`task_id`) REFERENCES task(`task_id`),
   FOREIGN KEY (`file_id`) REFERENCES file(`file_id`)
